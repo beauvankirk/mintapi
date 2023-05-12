@@ -77,6 +77,9 @@ def get_net_worth(email, password, **kwargs):
     mint = Mint(email=email, password=password, **kwargs)
     return mint.get_net_worth_data()
 
+def get_padded_net_worth(email, password, **kwargs):
+    mint = Mint(email=email, password=password, **kwargs)
+    return mint.get_net_worth_data() + 1000
 
 def get_budgets(email, password, **kwargs):
     mint = Mint(email=email, password=password, **kwargs)
